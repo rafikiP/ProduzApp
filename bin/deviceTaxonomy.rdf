@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:base="http://localhost:82/DiscoveryAPI/">
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Device">
+        <rdfs:label>Device</rdfs:label>
+        <rdfs:comment>A Device is usually a constructed tool</rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Actuator">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Device"/>
+        <rdfs:label>Actuator</rdfs:label>
+        <rdfs:comment>An actuator is a type of motor for moving or controlling a mechanism or system</rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Sensor">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Device"/>
+        <rdfs:label>Sensor</rdfs:label>
+        <rdfs:comment>
+            A sensor (also called detector) is a converter that measures a physical quantity and converts it into a signal 
+            which can be read by an observer or by an (today mostly electronic) instrument
+        </rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Lamp">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Actuator"/>
+        <rdfs:label>Lamp</rdfs:label>
+        <rdfs:comment>Lamp (electrical component), a replaceable component that produces light</rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Switch">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Actuator"/>
+        <rdfs:label>Switch</rdfs:label>
+        <rdfs:comment>
+            In electrical engineering, a switch is an electrical component that can break an electrical circuit, 
+            interrupting the current or diverting it from one conductor to another
+        </rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Buzzer">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Actuator"/>
+        <rdfs:label>Buzzer</rdfs:label>
+        <rdfs:comment>Buzzer (electrical component), output sounds</rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Temperature">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Sensor"/>
+        <rdfs:label>Temperature</rdfs:label>
+        <rdfs:comment>
+            A thermometer is a device that measures temperature or 
+            temperature gradient using a variety of different principles
+        </rdfs:comment>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://localhost:82/DiscoveryAPI/#Luminosity">
+        <rdfs:subClassOf rdf:resource="http://localhost:82/DiscoveryAPI/#Sensor"/>
+        <rdfs:label>Luminosity</rdfs:label>
+        <rdfs:comment>
+            Luminosity is generally understood as a measurement of brightness, 
+            in this case measured by a sensor
+        </rdfs:comment>
+    </rdfs:Class>
+    
+</rdf:RDF>

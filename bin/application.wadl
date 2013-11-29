@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://research.sun.com/wadl/2006/10">
+    <doc xmlns:jersey="http://jersey.dev.java.net/" jersey:generatedBy="Jersey: 1.6 03/25/2011 01:14 PM"/>
+    <resources base="http://localhost:8085/">
+        <resource path="devices/actuator/buzzer">
+            <resource path="/{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string" required="true" style="template" name="id"/>
+                <method name="GET" id="getMethod">
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+                <method name="POST" id="postMethod">
+                    <request>
+                        <representation mediaType="application/x-www-form-urlencoded">
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:string" style="query" name="status">
+                                <option value="ENABLE"/>
+                                <option value="DISABLE"/>
+                            </param>
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" required="true" type="xs:string" style="query" name="state">
+                                <option value="SLOW"/>
+                                <option value="FAST"/>
+                                <option value="CUSTOM"/>
+                            </param>
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:integer" style="query" name="duration"/>
+                        </representation>
+                    </request>
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="resource">
+            <method name="GET" id="descriptionRDF">
+                <response>
+                    <representation mediaType="text/xml"/>
+                </response>
+            </method>
+            <resource path="/application">
+                <method name="GET" id="descriptionWADL">
+                    <response>
+                        <representation mediaType="text/xml"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="devices/sensor/temperature">
+            <resource path="/{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" required="true" type="xs:string" style="template" name="id"/>
+                <method name="GET" id="getMethod">
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+                <method name="POST" id="postMethod">
+                    <request>
+                        <representation mediaType="application/x-www-form-urlencoded">
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:string" style="query" name="status">
+                                <option value="ENABLE"/>
+                                <option value="DISABLE"/>
+                            </param>
+                        </representation>
+                    </request>
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="devices/actuator/lamp">
+            <resource path="/{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" required="true" type="xs:string" style="template" name="id"/>
+                <method name="GET" id="getMethod">
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+                <method name="POST" id="postMethod">
+                    <request>
+                        <representation mediaType="application/x-www-form-urlencoded">
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:string" style="query" name="status">
+                                <option value="ENABLE"/>
+                                <option value="DISABLE"/>
+                            </param>
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" required="true" type="xs:string" style="query" name="state">
+                                <option value="ON"/>
+                                <option value="OFF"/>
+                                <option value="BLINK"/>
+                            </param>
+                        </representation>
+                    </request>
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="devices/sensor/luminosity">
+            <resource path="/{id}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" required="true" type="xs:string" style="template" name="id"/>
+                <method name="GET" id="getMethod">
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+                <method name="POST" id="postMethod">
+                    <request>
+                        <representation mediaType="application/x-www-form-urlencoded">
+                            <param xmlns:xs="http://www.w3.org/2001/XMLSchema" default="" type="xs:string" style="query" name="status">
+                                <option value="ENABLE"/>
+                                <option value="DISABLE"/>
+                            </param>
+                        </representation>
+                    </request>
+                    <response>
+                        <representation mediaType="text/javascript"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+    </resources>
+</application>

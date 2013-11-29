@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Description of resources
+-->
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sd="http://localhost:82/DiscoveryAPI/#">
+    
+    <sd:Lamp rdf:about="http://localhost:8085/devices/actuator/lamp/lampRed_8"></sd:Lamp>
+    <sd:Lamp rdf:about="http://localhost:8085/devices/actuator/lamp/lampYellow_9"></sd:Lamp>
+    <sd:Lamp rdf:about="http://localhost:8085/devices/actuator/lamp/lampWhite_7"></sd:Lamp>
+    
+    <sd:Buzzer rdf:about="http://localhost:8085/devices/actuator/buzzer/buzzer_6"></sd:Buzzer>
+    
+    <sd:Luminosity rdf:about="http://localhost:8085/devices/sensor/luminosity/lumi_5"></sd:Luminosity>
+    <sd:Temperature rdf:about="http://localhost:8085/devices/sensor/temperature/temp_0"></sd:Temperature>
+    
+</rdf:RDF>

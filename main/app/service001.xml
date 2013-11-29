@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:core="http://www.mulesoft.org/schema/mule/core" version="EE-3.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+    <flow name="service001Flow1" doc:name="service001Flow1">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8085" doc:name="HTTP"/>
+        <jersey:resources doc:name="REST">
+            <component class="com.arduino.ArduinoTemperature"/>
+            <component class="com.resource.Resources"/>
+            <component class="com.arduino.ArduinoLuminosity"/>
+            <component class="com.arduino.ArduinoLamp"/>
+            <component class="com.arduino.ArduinoBuzzer"/>
+        </jersey:resources>
+        <response>
+            <message-properties-transformer doc:name="Message Properties">
+                <add-message-property/>
+            </message-properties-transformer>
+        </response>
+    </flow>
+</mule>
